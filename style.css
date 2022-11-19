@@ -502,13 +502,17 @@ body {
     }
 
     .btn__image-arrow {
-        width: 7vh;
-        margin-top: -17vh;
+        width: 5vh;
+        margin-top: -13.5vh;
     }
 
     .header_block {
-        font-size: 25vw;
+        font-size: 20vw;
         margin: 0;
+    }
+
+    .wrapper_block .buttons-wrapper {
+        justify-content: flex-start;
     }
 
     .text {
@@ -600,6 +604,20 @@ body {
 
     .btn-push {
         font-size: 1.7vh;
+    }
+
+    .style-block {
+        width: 20vh;
+        height: 20vh;
+        filter: blur(5vh);
+    }
+
+    .style-block_blue {
+        top: 30vh;
+    }
+
+    .text {
+        font-size: 4vw;
     }
 
 }
