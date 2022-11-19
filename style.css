@@ -477,7 +477,9 @@ body {
 @media all and (max-width: 500px) {
 
     .wrapper_block {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
     .header_big {
