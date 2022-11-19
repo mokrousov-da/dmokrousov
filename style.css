@@ -558,6 +558,7 @@ body {
         width: 100%;
         height: 50%;
         border-radius: 2vh;
+        padding-bottom: 2em;
     }
 
     .contact-slide {
@@ -636,6 +637,11 @@ body {
     }
 
     .text_block-contacts {
+        font-size: 1.5vh;
         width: 100%;
+    }
+
+    .button_bottom-block {
+        font-size: 1.5vh;
     }
 }
