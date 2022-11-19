@@ -525,7 +525,7 @@ body {
     }
     .left-col {
         width: 100%;
-        text-align: center;
+        text-align: left;
         padding-top: 2vh;
     }
     
@@ -534,7 +534,7 @@ body {
     }
 
     .slider-image {
-        width: 170%;
+        width: 120%;
     }
 
     .slide {
@@ -598,5 +598,24 @@ body {
 
     .btn-push {
         font-size: 1.7vh;
+    }
+
+}
+
+@media all and (max-width: 490px) {
+    .header_block-contacts {
+        font-size: 11vw;
+    }
+
+    .button_bottom-block {
+        padding: 0.3em 1em;
+    }
+
+    .subheader_block-contacts {
+        font-size: 4vh;
+    }
+
+    .text_block-contacts {
+        width: 100%;
     }
 }
