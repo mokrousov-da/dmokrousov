@@ -20,30 +20,42 @@ function rotateBtnCircle() {
     window.requestAnimationFrame(rotateBtnCircle);
 }
 
-// document.addEventListener('wheel', (e) => {
-//     if (e.deltaY < 0) {
+let currentHeight;
+let slideHeight = sliderArray[0].offsetHeight;
+const coef = 0.5/slideHeight/0.96;
 
-//     } else if (e.deltaY > 0) {
-//         decreaseScale();
+let i = 0;
+let a = 0;
+// document.querySelector('body').addEventListener('wheel', (e) => {
+//     if (e.deltaY > 0) {
+//        changeScaleDown();
+//        console.log(currentHeight);
+//     } else if (e.deltaY < 0) {
+//         changeScaleUp();
 //     }
-// });
-
-
-// function decreaseScale() {
     
-//     if (scaleCounter >= 0.12) {
-//         scaleCounter = scaleCounter;
-//         return;
-//     } else {
-//         scaleCounter += 0.005; 
-//         marginCounter += 5;
-//         document.querySelector('.second-slide').style.marginTop = `-${marginCounter}px`;
+// })
+
+// function changeScaleDown() {
+//     currentHeight = window.pageYOffset;
+//     if (currentHeight > 0 && currentHeight < slideHeight/0.96) {
+//         sliderArray[0].style.transform = `scale3d(${1-coef*currentHeight}, ${1-coef*currentHeight}, 1)`;
+    
+//         sliderArray[0].style.position = "sticky";
+//         sliderArray[0].style.top = "0";
 //     }
-//     sliderArray[0].style.transform = `scale3d(${scaleX-scaleCounter}, ${scaleY-scaleCounter}, 1)`;
 // }
 
-// document.querySelector('.second-slide').addEventListener('click', () => {
-//     console.log(document.querySelector('.second-slide').offsetTop);
-//     console.log(document.querySelector('.second-slide').scrollTop);
-//     console.log(window.pageYOffset);
-// })
+// function changeScaleUp() {
+//     // const compStyles = window.getComputedStyle(sliderArray[0]);
+//     // const paraScale = compStyles.getPropertyValue('transform');
+//     const paraScale = sliderArray[0].style.transform;
+//     console.log(paraScale);
+//     currentHeight = window.pageYOffset;
+//     if (currentHeight > 0 && currentHeight < slideHeight/0.96) {
+//         sliderArray[0].style.transform = `scale3d(${0.5+coef*currentHeight}, ${0.5+coef*currentHeight}, 1)`;
+    
+//         sliderArray[0].style.position = "sticky";
+//         sliderArray[0].style.top = "0";
+//     }
+// }
