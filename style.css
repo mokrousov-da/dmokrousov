@@ -14,6 +14,21 @@ body {
     /* background: black; */
 }
 
+.cursorImage {
+    position: absolute;
+    display: none;
+    color: white;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.233);
+    backdrop-filter: blur(5px);
+    padding: 53px 5px;
+    border-radius: 70px;
+}
+
+.splide {
+    margin: auto 0;
+}
+
 .first-slide {
     display: flex;
     flex-direction: column;
@@ -25,9 +40,9 @@ body {
 }
 
 .slide {
-    width: 97vw;
-    border-radius: 1vw;
-    margin: 2vh auto;
+    /* width: 97vw; */
+    /* border-radius: 1vw; */
+    /* margin: 2vh auto; */
     height: 96vh;
     overflow-y: hidden;
     display: flex;
@@ -35,6 +50,10 @@ body {
     align-items: center;
     overflow: hidden;
     transform: scale3d(1, 1, 1);
+}
+
+.splide {
+    height: auto;
 }
 
 .header {
@@ -130,6 +149,7 @@ body {
     flex-direction: column;
     margin-top: auto;
     width: 40%;
+    opacity: 0;
 }
 
 .right-col {
@@ -282,6 +302,12 @@ body {
 
 .network-icon {
     width: 5vh;
+}
+
+.text_block-contacts {
+    text-decoration: none;
+    color: white;
+    display: block;
 }
 
 @media all and (max-width: 1250px) {

@@ -21,41 +21,24 @@ function rotateBtnCircle() {
 }
 
 let currentHeight;
+let sliderCounter;
 let slideHeight = sliderArray[0].offsetHeight;
 const coef = 0.5/slideHeight/0.96;
 
-let i = 0;
-let a = 0;
-// document.querySelector('body').addEventListener('wheel', (e) => {
-//     if (e.deltaY > 0) {
-//        changeScaleDown();
-//        console.log(currentHeight);
-//     } else if (e.deltaY < 0) {
-//         changeScaleUp();
-//     }
-    
-// })
+sliderCounter = Math.floor(window.pageYOffset / slideHeight);
+currentHeight = window.pageYOffset;
 
-// function changeScaleDown() {
-//     currentHeight = window.pageYOffset;
-//     if (currentHeight > 0 && currentHeight < slideHeight/0.96) {
-//         sliderArray[0].style.transform = `scale3d(${1-coef*currentHeight}, ${1-coef*currentHeight}, 1)`;
-    
-//         sliderArray[0].style.position = "sticky";
-//         sliderArray[0].style.top = "0";
-//     }
-// }
+const cursorImage = document.createElement('p');
+cursorImage.innerHTML = 'see the project';
+cursorImage.classList.add('cursorImage');
 
-// function changeScaleUp() {
-//     // const compStyles = window.getComputedStyle(sliderArray[0]);
-//     // const paraScale = compStyles.getPropertyValue('transform');
-//     const paraScale = sliderArray[0].style.transform;
-//     console.log(paraScale);
-//     currentHeight = window.pageYOffset;
-//     if (currentHeight > 0 && currentHeight < slideHeight/0.96) {
-//         sliderArray[0].style.transform = `scale3d(${0.5+coef*currentHeight}, ${0.5+coef*currentHeight}, 1)`;
-    
-//         sliderArray[0].style.position = "sticky";
-//         sliderArray[0].style.top = "0";
-//     }
-// }
+const sliderImageArray = Array.from(document.querySelectorAll('.right-col'));
+
+sliderImageArray.forEach(element => {
+    element.appendChild(cursorImage.cloneNode(true));
+    element.addEventListener('mousemove', (e) => {
+        element.querySelector('.cursorImage').style.left = e.pageX + 15 + 'px';
+        element.querySelector('.cursorImage').style.top = e.pageY + 15 + 'px';
+        element.querySelector('.cursorImage').style.display = 'block';
+    })
+})
